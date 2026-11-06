@@ -1,0 +1,19 @@
+/* Piste A — « L'Atelier » : beige nude, lumière chaude, serif élégant */
+:root{
+  --bg:#EFE6DC;--fg:#2B2118;--surface:#F7F1E8;--line:#C9B8A3;
+  --accent:#A67C37;--link:#6B4A17;--focus:#2B2118;
+  --btn-bg:#2B2118;--btn-fg:#F7F1E8;
+  --font-title:Didot,"Bodoni 72","Bodoni MT",Georgia,"Times New Roman",serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+.hero{text-align:center;padding-block:clamp(3rem,9vw,6rem) 2rem}
+.hero p{margin-inline:auto}
+.hero .actions{justify-content:center}
+.hero .deco{max-width:34rem;margin:2.5rem auto 0}
+h2{text-align:center}
+#concept p,#engagements>p{margin-inline:auto;text-align:center}
+.band h2,.checks{margin-inline:auto}
+.lead{margin-inline:auto}
+.site-header{text-align:center}
+.site-header .bar{justify-content:center}

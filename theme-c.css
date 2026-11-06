@@ -1,0 +1,25 @@
+/* Piste C — « L'étincelle » : éditorial, blanc cassé, gris-bleu et or, typographie affirmée */
+:root{
+  --bg:#F7F7F2;--fg:#1E1F26;--surface:#A0A7AD;--line:#1E1F26;
+  --accent:#D4AF37;--link:#1E1F26;--focus:#1E1F26;
+  --btn-bg:#D4AF37;--btn-fg:#1E1F26;--gold-text:#8A6D1A;
+  --font-title:"Helvetica Neue",Arial,"Liberation Sans",sans-serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+h1,h2,h3{font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+h1{font-size:clamp(2.6rem,11vw,7.5rem);line-height:.95;letter-spacing:0}
+.kicker{color:var(--gold-text);font-weight:700}
+.hero{border-bottom:6px solid var(--accent)}
+.hero .lead{font-size:1.4rem;max-width:36ch}
+.hero .deco{max-width:18rem;margin-top:2.5rem}
+.band{background:var(--surface)}
+.band .card{background:var(--bg);border-color:var(--fg)}
+.band .kicker{color:var(--fg)}
+.steps{grid-template-columns:1fr}
+@media (min-width:52rem){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{border-top:6px solid var(--accent)}
+.steps li::before{font-size:4.5rem;font-weight:700;line-height:1;color:var(--gold-text)}
+.checks li::before{background:var(--gold-text)}
+.site-header{border-bottom:2px solid var(--fg)}
+.brand{font-weight:700}
