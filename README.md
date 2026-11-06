@@ -1,12 +1,14 @@
 # Maison Infini – Homepage (3 pistes créatives)
 
-Site statique, sans JavaScript, sans police web, sans image : léger, éco-conçu et accessible (RGAA).
+Site statique, sans JavaScript, sans police web, images WebP légères uniquement : léger, éco-conçu et accessible (RGAA).
 
 | Fichier | Piste | Ambiance |
 |---|---|---|
-| `index.html` + `theme-a.css` | A · L'Atelier | Beige nude, lumière chaude, serif élégant (moodboard 1 : boutique, packaging) |
+| `piste-a.html` + `theme-a.css` | A · L'Atelier | Beige nude, lumière chaude, serif élégant (moodboard 1 : boutique, packaging) |
 | `piste-b.html` + `theme-b.css` | B · Sans début ni fin | Brun nuit et or, ambiance écrin (moodboard 1 : visuels sombres) |
 | `piste-c.html` + `theme-c.css` | C · L'étincelle | Éditorial, blanc cassé, gris-bleu et or, typographie affirmée (moodboard 2 : palette) |
+
+**`index.html` + `home.css` : homepage boutique avec photos et logo (dossier `img/`).**
 
 `base.css` est partagé par les trois pistes. `accessibilite.html` est la déclaration d'accessibilité.
 
@@ -24,8 +26,8 @@ Site statique, sans JavaScript, sans police web, sans image : léger, éco-conç
 
 ## Éco-conception
 
-- 0 requête externe, 0 JavaScript, polices système uniquement, illustrations en SVG inline.
-- Pour ajouter des photos : AVIF/WebP, `loading="lazy"`, `width`/`height` renseignés, texte alternatif pertinent.
+- 0 requête externe, 0 JavaScript, polices système uniquement, 8 images WebP (environ 105 Ko), dimensions renseignées, chargement différé sous la ligne de flottaison.
+- Les photos viennent du moodboard du dossier (recadrées, petites). Pour des photos plus nettes : WebP/AVIF, `loading="lazy"`, `width`/`height`, texte alternatif pertinent.
 
 ## Accessibilité (RGAA)
 

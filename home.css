@@ -1,0 +1,114 @@
+/* Maison Infini — homepage boutique (éco-conçue : polices système, images WebP légères, aucun JS) */
+:root{
+  --bg:#F5EFE8;--surface:#EADFD3;--fg:#2A211A;--dark:#1E1712;--on-dark:#F3E9DC;
+  --gold:#B8964F;--gold-text:#7A5520;--gold-on-dark:#D9B26A;--line:#CDBCA9;--steel:#A0A7AD;
+  --title:Didot,"Bodoni 72","Bodoni MT",Georgia,"Times New Roman",serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:100%;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--title);font-weight:400;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.2rem,6vw,4rem)}
+h2{font-size:clamp(1.7rem,4vw,2.5rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--gold-text);text-underline-offset:.2em}
+a:hover{text-decoration-thickness:.15em}
+:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.dark :focus-visible,.topbar :focus-visible{outline-color:var(--on-dark)}
+
+.skip{position:absolute;left:1rem;top:-5rem;z-index:10;padding:.75rem 1rem;background:var(--fg);color:var(--bg)}
+.skip:focus{top:1rem}
+.wrap{width:min(100% - 2rem,72rem);margin-inline:auto}
+main>section{padding-block:clamp(3rem,8vw,5.5rem)}
+.kicker{margin:0 0 1rem;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text)}
+.dark .kicker{color:var(--gold-on-dark)}
+.btn{display:inline-block;min-height:2.75rem;padding:.85rem 1.7rem;border:2px solid var(--fg);background:var(--fg);color:var(--bg);font-weight:600;letter-spacing:.06em;text-decoration:none}
+.btn:hover{background:var(--bg);color:var(--fg)}
+.btn.alt{background:transparent;color:var(--fg)}
+.btn.alt:hover{background:var(--fg);color:var(--bg)}
+.dark .btn{background:var(--gold-on-dark);border-color:var(--gold-on-dark);color:var(--dark)}
+.dark .btn:hover{background:transparent;color:var(--on-dark)}
+.actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.75rem}
+
+/* Barre d'annonce et en-tête */
+.topbar{background:var(--dark);color:var(--on-dark);font-size:.9rem;text-align:center;padding:.6rem 1rem}
+.topbar p{margin:0 auto;max-width:none}
+.site-header{border-bottom:1px solid var(--line)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 2rem;padding-block:.9rem}
+.brand{display:flex;align-items:center;gap:.9rem;color:var(--fg);text-decoration:none;font-family:var(--title);letter-spacing:.3em;text-transform:uppercase;font-size:.95rem}
+.brand img{width:4.75rem;height:4.75rem;object-fit:cover}
+.site-header ul{display:flex;flex-wrap:wrap;gap:0 1.6rem;margin:0;padding:0;list-style:none}
+.site-header nav a{display:inline-block;padding:.6rem .1rem;color:var(--fg);text-decoration:none;border-bottom:2px solid transparent}
+.site-header nav a:hover{border-bottom-color:var(--gold)}
+
+/* Hero */
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+.hero figure{margin:0}
+.hero img{width:100%;max-width:26rem;margin-inline:auto;aspect-ratio:398/553;object-fit:cover}
+.lead{font-size:1.2rem;max-width:42ch}
+@media (min-width:52rem){.hero .wrap{grid-template-columns:1.1fr 1fr}}
+
+/* Bandeau de réassurance */
+.trust{background:var(--surface);padding-block:1.5rem;border-block:1px solid var(--line)}
+.trust ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1rem 1.5rem;margin:0;padding:0;list-style:none;text-align:center}
+.trust strong{display:block;font-family:var(--title);font-size:1.1rem;font-weight:400}
+.trust span{font-size:.92rem}
+
+/* Collections */
+.section-head{text-align:center;margin-bottom:2.5rem}
+.section-head p{margin-inline:auto}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.25rem;margin:0;padding:0;list-style:none}
+.tile a{display:block;color:var(--fg);text-decoration:none}
+.tile img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.tile h3{margin:.9rem 0 .15rem}
+.tile p{margin:0;font-size:.95rem}
+.tile a:hover h3{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:.25em}
+
+/* Bandes sombres */
+.dark{background:var(--dark);color:var(--on-dark)}
+.dark a{color:var(--gold-on-dark)}
+.split{display:grid;gap:2.5rem;align-items:center}
+.split figure{margin:0}
+.split img{width:100%;max-width:24rem;margin-inline:auto;object-fit:cover}
+@media (min-width:52rem){.split{grid-template-columns:1fr 1.2fr}.split.rev{grid-template-columns:1.2fr 1fr}.split.rev figure{order:2}}
+.steps{counter-reset:s;margin:1.5rem 0 0;padding:0;list-style:none;display:grid;gap:1.25rem}
+.steps li{counter-increment:s;padding-left:3.2rem;position:relative}
+.steps li::before{content:"0" counter(s);position:absolute;left:0;top:-.1rem;font-family:var(--title);font-size:2rem;color:var(--gold-on-dark)}
+.steps h3{margin-bottom:.2em}
+.steps p{margin:0}
+
+/* Pour qui, cartes */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.25rem;margin:1.5rem 0 0;padding:0;list-style:none}
+.card{padding:1.4rem;border:1px solid var(--line);background:var(--surface)}
+.card h3{margin-bottom:.35em}
+.card p{margin:0}
+
+/* Tableau */
+.table-wrap{overflow-x:auto;margin-top:1.5rem}
+table{width:100%;border-collapse:collapse}
+caption{padding-bottom:.75rem;text-align:left;font-style:italic}
+th,td{padding:.8rem .75rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{border-bottom:2px solid var(--gold)}
+td:last-child,th:last-child{white-space:nowrap}
+
+.checks{margin:1rem 0 0;padding:0;list-style:none;max-width:62ch}
+.checks li{position:relative;padding:.6rem 0 .6rem 1.75rem;border-bottom:1px solid var(--line)}
+.checks li::before{content:"";position:absolute;left:.2rem;top:1.1rem;width:.55rem;height:.55rem;background:var(--gold);transform:rotate(45deg)}
+
+/* Rendez-vous et pied de page */
+.cta{text-align:center}
+.cta p{margin-inline:auto}
+.cta .actions{justify-content:center}
+.site-footer{background:var(--surface);padding-block:2.5rem;border-top:1px solid var(--line);font-size:.95rem}
+.site-footer .wrap{display:grid;gap:1.5rem}
+.site-footer img{width:7rem;height:7rem;object-fit:cover}
+.site-footer ul{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;margin:0;padding:0;list-style:none}
+.site-footer p{margin:0}
+.site-footer a{display:inline-block;padding:.4rem 0}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@media print{.skip,.topbar,.site-header nav,.actions{display:none}}
