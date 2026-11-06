@@ -26,7 +26,7 @@ Site statique, sans JavaScript, sans police web, images WebP légères uniquemen
 
 ## Éco-conception
 
-- 0 requête externe, 0 JavaScript, polices système uniquement, 8 images WebP (environ 105 Ko), dimensions renseignées, chargement différé sous la ligne de flottaison.
+- 0 requête externe, 0 JavaScript, polices système uniquement, 8 images WebP (environ 140 Ko), dimensions renseignées, chargement différé sous la ligne de flottaison.
 - Les photos viennent du moodboard du dossier (recadrées, petites). Pour des photos plus nettes : WebP/AVIF, `loading="lazy"`, `width`/`height`, texte alternatif pertinent.
 
 ## Accessibilité (RGAA)
